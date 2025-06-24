@@ -46,4 +46,5 @@ MIT License
 
 - OpenStreetMap 提供地理数据支持
 - Google Maps 提供地图显示服务
-- Cloudflare 提供托管服务 
+- Cloudflare 提供托管服务
+- [Real-Address-Generator](https://github.com/Adonis142857/Real-Address-Generator)
