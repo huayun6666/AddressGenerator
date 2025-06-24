@@ -1,6 +1,7 @@
 # 随机地址生成器
 
 这是一个基于 Cloudflare Workers 的随机地址生成器，可以生成全球多个国家的真实地址、姓名和电话号码。
+本项目基于[Real-Address-Generator](https://github.com/Adonis142857/Real-Address-Generator)做了一些样式和逻辑上的调整和优化。
 
 ## 主要功能
 
@@ -13,7 +14,7 @@
 
 ## 部署到 Cloudflare Workers
 
-在Cloudflare创建一个worker项目，把woker.js[https://raw.githubusercontent.com/jiangnan1224/AddressGenerator/refs/heads/main/worker.js] 代码内容复制到worker项目内部署即可。
+在Cloudflare创建一个worker项目，把[woker.js](https://raw.githubusercontent.com/jiangnan1224/AddressGenerator/refs/heads/main/worker.js) 代码内容复制到worker项目内部署即可。
 
 ## 技术栈
 
