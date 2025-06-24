@@ -1,5 +1,10 @@
 # 随机地址生成器
 
+## 预览地址
+(随机地址生成器)[https://addr.jiangnan24.com/]
+
+## 简介
+
 这是一个基于 Cloudflare Workers 的随机地址生成器，可以生成全球多个国家的真实地址、姓名和电话号码。
 本项目基于[Real-Address-Generator](https://github.com/Adonis142857/Real-Address-Generator)做了一些样式和逻辑上的调整和优化。
 
