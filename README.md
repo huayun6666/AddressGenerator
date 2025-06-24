@@ -3,6 +3,7 @@
 ## 预览地址
 [随机地址生成器](https://addr.jiangnan24.com/)
 
+![效果图](https://github.com/jiangnan1224/AddressGenerator/blob/05cc096c8b50abd1bf3599a0fe0d3a7b12a763d3/Snipaste_2025-06-24_19-38-46.png)
 
 ## 简介
 
