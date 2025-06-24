@@ -1,7 +1,8 @@
 # 随机地址生成器
 
 ## 预览地址
-(随机地址生成器)[https://addr.jiangnan24.com/]
+[随机地址生成器](https://addr.jiangnan24.com/)
+
 
 ## 简介
 
