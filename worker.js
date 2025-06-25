@@ -347,14 +347,16 @@ const htmlContent = `<!DOCTYPE html>
 
         <!-- 国家选择 -->
         <div class="bg-white rounded-2xl shadow-xl p-6 border border-gray-200 mb-8">
-            <div class="flex items-center gap-4">
-                <label for="country" class="text-blue-600 font-bold whitespace-nowrap">选择国家/地区：</label>
-                <select id="country" 
-                        onchange="changeCountry(this.value)" 
-                        class="flex-1 bg-gray-50 border border-gray-200 rounded-xl p-3 text-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
-                </select>
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div class="w-full sm:w-auto flex flex-col sm:flex-row items-start sm:items-center gap-2 flex-grow">
+                    <label for="country" class="text-blue-600 font-bold whitespace-nowrap">选择国家/地区：</label>
+                    <select id="country" 
+                            onchange="changeCountry(this.value)" 
+                            class="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 text-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+                    </select>
+                </div>
                 <button onclick="generateNewAddress(document.getElementById('country').value)" 
-                        class="bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white font-bold py-3 px-6 rounded-xl transition-all transform hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 whitespace-nowrap">
+                        class="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white font-bold py-3 px-6 rounded-xl transition-all transform hover:scale-105 hover:shadow-lg focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
                     获取新地址
                 </button>
             </div>
