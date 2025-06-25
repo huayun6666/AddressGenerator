@@ -63,6 +63,66 @@ const namesByCountry = {
     "DE": {
         first: ["Mueller", "Schmidt", "Schneider", "Fischer", "Weber", "Meyer", "Wagner", "Becker", "Schulz", "Hoffmann"],
         last: ["Ben", "Paul", "Leon", "Noah", "Luis", "Finn", "Felix", "Jonas", "Maximilian", "Henry"]
+    },
+    "IT": {
+        first: ["Rossi", "Ferrari", "Russo", "Bianchi", "Romano", "Gallo", "Costa", "Fontana", "Conti", "Esposito"],
+        last: ["Leonardo", "Francesco", "Alessandro", "Lorenzo", "Matteo", "Andrea", "Gabriele", "Marco", "Antonio", "Giuseppe"]
+    },
+    "ES": {
+        first: ["Garcia", "Rodriguez", "Gonzalez", "Fernandez", "Lopez", "Martinez", "Sanchez", "Perez", "Martin", "Gomez"],
+        last: ["Antonio", "Jose", "Manuel", "Francisco", "David", "Juan", "Miguel", "Javier", "Rafael", "Carlos"]
+    },
+    "BR": {
+        first: ["Silva", "Santos", "Oliveira", "Souza", "Rodrigues", "Ferreira", "Alves", "Pereira", "Lima", "Gomes"],
+        last: ["Miguel", "Arthur", "Heitor", "Pedro", "Davi", "Gabriel", "Bernardo", "Lucas", "Matheus", "Rafael"]
+    },
+    "RU": {
+        first: ["Ivanov", "Smirnov", "Kuznetsov", "Popov", "Vasiliev", "Petrov", "Sokolov", "Mikhailov", "Fedorov", "Morozov"],
+        last: ["Alexander", "Dmitry", "Maxim", "Ivan", "Andrey", "Mikhail", "Artem", "Daniel", "Roman", "Sergey"]
+    },
+    "IN": {
+        first: ["Kumar", "Singh", "Sharma", "Patel", "Gupta", "Shah", "Verma", "Rao", "Reddy", "Joshi"],
+        last: ["Aarav", "Vihaan", "Vivaan", "Aditya", "Arjun", "Reyansh", "Ayaan", "Sai", "Krishna", "Ishaan"]
+    },
+    "AU": {
+        first: ["Smith", "Jones", "Williams", "Brown", "Wilson", "Taylor", "Johnson", "White", "Anderson", "Thompson"],
+        last: ["Oliver", "William", "Jack", "Noah", "Thomas", "James", "Lucas", "Henry", "Ethan", "Alexander"]
+    },
+    "CA": {
+        first: ["Smith", "Brown", "Tremblay", "Martin", "Roy", "Wilson", "MacDonald", "Taylor", "Campbell", "Anderson"],
+        last: ["Liam", "Noah", "Oliver", "William", "James", "Benjamin", "Lucas", "Henry", "Theodore", "Jack"]
+    },
+    "MX": {
+        first: ["Garcia", "Rodriguez", "Martinez", "Lopez", "Gonzalez", "Perez", "Sanchez", "Ramirez", "Torres", "Flores"],
+        last: ["Santiago", "Mateo", "Sebastian", "Leonardo", "Diego", "Daniel", "Gabriel", "Adrian", "David", "Alexander"]
+    },
+    "TR": {
+        first: ["Yilmaz", "Kaya", "Demir", "Sahin", "Celik", "Yildiz", "Erdogan", "Ozturk", "Aydin", "Ozdemir"],
+        last: ["Yusuf", "Eymen", "Ömer", "Mustafa", "Ali", "Mehmet", "Ahmet", "Emir", "Hamza", "Ibrahim"]
+    },
+    "SA": {
+        first: ["Al-Saud", "Al-Sheikh", "Al-Rashid", "Al-Qahtani", "Al-Ghamdi", "Al-Zahrani", "Al-Dossari", "Al-Shammari", "Al-Otaibi", "Al-Harbi"],
+        last: ["Mohammed", "Abdullah", "Ahmed", "Ali", "Omar", "Ibrahim", "Khalid", "Hassan", "Fahad", "Abdul"]
+    },
+    "AR": {
+        first: ["Gonzalez", "Rodriguez", "Garcia", "Fernandez", "Lopez", "Martinez", "Perez", "Romero", "Sanchez", "Diaz"],
+        last: ["Mateo", "Thiago", "Benjamin", "Valentino", "Santiago", "Juan", "Lucas", "Martin", "Nicolas", "Joaquin"]
+    },
+    "EG": {
+        first: ["Mohamed", "Ahmed", "Mahmoud", "Ibrahim", "Ali", "Hassan", "Hussein", "Mostafa", "Kamal", "Samir"],
+        last: ["Omar", "Youssef", "Adam", "Malik", "Zain", "Hamza", "Kareem", "Hassan", "Ali", "Ibrahim"]
+    },
+    "NG": {
+        first: ["Okafor", "Adebayo", "Okonkwo", "Eze", "Oluwaseun", "Adegoke", "Afolabi", "Ogunleye", "Adeniyi", "Adesina"],
+        last: ["Oluwadamilare", "Oluwatobiloba", "Ayomide", "Temitope", "Oluwaseun", "Adebayo", "Chibuike", "Chisom", "Chidi", "Obinna"]
+    },
+    "ID": {
+        first: ["Wijaya", "Kusuma", "Suryanto", "Halim", "Santoso", "Tanaka", "Wibowo", "Susanto", "Hidayat", "Putra"],
+        last: ["Muhammad", "Ahmad", "Abdul", "Aditya", "Budi", "Dimas", "Eko", "Fajar", "Gading", "Hadi"]
+    },
+    "ZA": {
+        first: ["Nkosi", "Van der Merwe", "Botha", "Mkhize", "Khumalo", "Pretorius", "Venter", "Ndlovu", "Fourie", "Nel"],
+        last: ["Bandile", "Themba", "Sipho", "Thabo", "Jabu", "Mandla", "Blessing", "Gift", "Lucky", "Precious"]
     }
 };
 
@@ -109,6 +169,36 @@ const phoneFormats = {
     "CA": {
         format: "+1 (XXX) XXX-XXXX",
         areaCodeRanges: [[204, 989]]
+    },
+    "MX": {
+        format: "+52 1XX XXX XXXX"
+    },
+    "TR": {
+        format: "+90 5XX XXX XXXX",
+        mobilePrefix: ["5"]
+    },
+    "SA": {
+        format: "+966 5XX XXX XXXX",
+        mobilePrefix: ["5"]
+    },
+    "AR": {
+        format: "+54 9XX XXXX-XXXX"
+    },
+    "EG": {
+        format: "+20 1XX XXX XXXX",
+        mobilePrefix: ["1"]
+    },
+    "NG": {
+        format: "+234 8XX XXX XXXX",
+        mobilePrefix: ["7", "8", "9"]
+    },
+    "ID": {
+        format: "+62 8XX-XXXX-XXXX",
+        mobilePrefix: ["8"]
+    },
+    "ZA": {
+        format: "+27 8X XXX XXXX",
+        mobilePrefix: ["6", "7", "8"]
     }
 };
 
@@ -143,7 +233,20 @@ function getRandomPhoneNumber(country) {
     const format = phoneFormats[country] || phoneFormats["US"];
     let phone = format.format;
 
-    if (format.areaCodeRanges) {
+    if (country === 'CN') {
+        // 中国手机号码前三位的有效组合
+        const validPrefixes = [
+            '130','131','132','133','134','135','136','137','138','139',
+            '150','151','152','153','155','156','157','158','159',
+            '166','167','168','169',
+            '170','171','172','173','175','176','177','178',
+            '180','181','182','183','184','185','186','187','188','189',
+            '198','199'
+        ];
+        const prefix = validPrefixes[Math.floor(Math.random() * validPrefixes.length)];
+        const remaining = Array.from({length: 8}, () => Math.floor(Math.random() * 10)).join('');
+        return `+86 ${prefix}-${remaining.slice(0,4)}-${remaining.slice(4)}`;
+    } else if (format.areaCodeRanges) {
         const areaCode = generateAreaCode(format.areaCodeRanges);
         phone = phone.replace("XXX", areaCode);
         phone = phone.replace(/X/g, () => Math.floor(Math.random() * 10));
@@ -324,8 +427,8 @@ const htmlContent = `<!DOCTYPE html>
     <!-- 页脚 -->
     <footer class="text-center py-8 text-gray-600 text-sm mt-8 bg-gray-50 border-t border-gray-200">
         <p class="max-w-4xl mx-auto px-4">
-            Original version by chatgpt.org.uk, modified by Adonis142857 ｜ 
-            <a href="https://github.com/Adonis142857/Real-Address-Generator" 
+            All right reserved
+            <a href="https://github.com/jiangnan1224/AddressGenerator/" 
                target="_blank" 
                class="inline-flex items-center hover:text-blue-600 transition-colors">
                 <img src="https://pic.imgdb.cn/item/66e7ab36d9c307b7e9cefd24.png" alt="GitHub" class="w-5 h-5 ml-1">
