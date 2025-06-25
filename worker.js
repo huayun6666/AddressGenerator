@@ -218,9 +218,7 @@ function getRandomName(country) {
     const names = namesByCountry[country];
     const firstName = names.first[Math.floor(Math.random() * names.first.length)];
     const lastName = names.last[Math.floor(Math.random() * names.last.length)];
-    return ['CN', 'JP', 'KR', 'TW', 'HK'].includes(country) ? 
-           `${firstName}${lastName}` : 
-           `${firstName} ${lastName}`;
+    return `${firstName} ${lastName}`;
 }
 
 function generateAreaCode(ranges) {
@@ -233,31 +231,20 @@ function getRandomPhoneNumber(country) {
     const format = phoneFormats[country] || phoneFormats["US"];
     let phone = format.format;
 
-    if (country === 'CN') {
-        // 中国手机号码前三位的有效组合
-        const validPrefixes = [
-            '130','131','132','133','134','135','136','137','138','139',
-            '150','151','152','153','155','156','157','158','159',
-            '166','167','168','169',
-            '170','171','172','173','175','176','177','178',
-            '180','181','182','183','184','185','186','187','188','189',
-            '198','199'
-        ];
-        const prefix = validPrefixes[Math.floor(Math.random() * validPrefixes.length)];
-        const remaining = Array.from({length: 8}, () => Math.floor(Math.random() * 10)).join('');
-        return `+86 ${prefix}-${remaining.slice(0,4)}-${remaining.slice(4)}`;
-    } else if (format.areaCodeRanges) {
+    if (format.areaCodeRanges) {
         const areaCode = generateAreaCode(format.areaCodeRanges);
         phone = phone.replace("XXX", areaCode);
         phone = phone.replace(/X/g, () => Math.floor(Math.random() * 10));
     } else if (format.mobilePrefix) {
         const prefix = format.mobilePrefix[Math.floor(Math.random() * format.mobilePrefix.length)];
-        phone = phone.replace(/X/g, () => Math.floor(Math.random() * 10));
-        if (prefix.length === 1) {
-            phone = phone.replace(/X/, prefix);
-        } else if (prefix.length === 2) {
+        // 先替换前缀
+        if (prefix.length === 2) {
             phone = phone.replace(/XX/, prefix);
+        } else {
+            phone = phone.replace(/X/, prefix);
         }
+        // 然后替换剩余的X
+        phone = phone.replace(/X/g, () => Math.floor(Math.random() * 10));
     } else {
         phone = phone.replace(/X/g, () => Math.floor(Math.random() * 10));
     }
@@ -412,12 +399,12 @@ const htmlContent = `<!DOCTYPE html>
                 <table class="w-full border-collapse" id="savedAddressesTable">
                     <thead>
                         <tr class="bg-gradient-to-r from-blue-500 to-sky-500 text-white">
-                            <th class="p-4 text-left rounded-tl-lg">操作</th>
-                            <th class="p-4 text-left">备注</th>
-                            <th class="p-4 text-left">姓名</th>
+                            <th class="p-4 text-left rounded-tl-lg">姓名</th>
                             <th class="p-4 text-left">性别</th>
                             <th class="p-4 text-left">电话号码</th>
-                            <th class="p-4 text-left rounded-tr-lg">地址</th>
+                            <th class="p-4 text-left">地址</th>
+                            <th class="p-4 text-left">备注</th>
+                            <th class="p-4 text-left rounded-tr-lg">操作</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -538,12 +525,12 @@ const htmlContent = `<!DOCTYPE html>
                 const row = tbody.insertRow();
                 row.className = 'border-t border-gray-200 hover:bg-gray-50 transition-colors';
                 
-                const cells = ['', 'note', 'name', 'gender', 'phone', 'address'];
+                const cells = ['name', 'gender', 'phone', 'address', 'note', ''];
                 cells.forEach((cell, i) => {
                     const td = row.insertCell();
                     td.className = 'p-4';
                     
-                    if (i === 0) {
+                    if (i === cells.length - 1) {
                         const deleteBtn = document.createElement('button');
                         deleteBtn.textContent = '删除';
                         deleteBtn.className = 'bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg transition-all transform hover:scale-105 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50';
